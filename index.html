@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Responsive Navbar</title>
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+</head>
+<body>
+	<nav>
+		<ul class="topNav" id="dropdownClick">
+			<li><a class="active" href="#Home">Home</a></li>
+			<li><a href="#News">News</a></li>
+			<li><a href="#About">About</a></li>
+			<li><a href="#Contact">Contact</a></li>
+			<li class="topNav-Right"><a href="#SignUp">Sign Up</a></li>
+			<li class="topNav-Right"><a href="#Signin">Sign In</a></li>
+			<li class="dropdownIcon"><a href="javascript:void(0);" onclick = "dropdownMenu()" >&#9776</a></li> 
+		</ul>
+	</nav>
+	<script>
+		function dropdownMenu() {
+			var x = document.getElementById("dropdownClick");
+			if(x.className === "topNav"){
+				x.className += " responsive";
+			}
+			else{
+				x.className ="topNav";
+			}
+		}
+	</script>
+</body>
+</html>
